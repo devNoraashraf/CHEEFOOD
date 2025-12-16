@@ -1,4 +1,5 @@
 import 'package:chefood/core/constants/app_colors.dart';
+import 'package:chefood/onboarding/auth_actions_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -29,15 +30,25 @@ class _BoardingIndicatorState extends State<BoardingIndicator> {
         radius: 30,
         backgroundColor: AppColors.primary,
         child: widget.currentIndex == 3
-            ? Text(
-                "Start",
-                style: TextStyle(color: AppColors.white, fontSize: 16),
-              )
-            : IconButton(
+            ? TextButton(
                 onPressed: () {
                   widget.onboardingPageController.nextPage(
                     duration: Duration(microseconds: 500),
                     curve: Curves.ease,
+                  );
+                },
+                child: Text(
+                  "Start",
+                  style: TextStyle(color: AppColors.white, fontSize: 16),
+                ),
+              )
+            : IconButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => AuthActionsScreen(),
+                    ),
                   );
                 },
                 icon: SvgPicture.asset("assets/svgs/solar_arrow-up-broken.svg"),

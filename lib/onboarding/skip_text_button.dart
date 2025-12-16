@@ -22,9 +22,9 @@ class _SkipTextButtonState extends State<SkipTextButton> {
     return GestureDetector(
       onTap: () {
         setState(() {});
-        widget.onboardingPageController.jumpToPage(3);
+        widget.onboardingPageController.jumpToPage(4);
       },
-      child: widget.currentIndex == 3
+      child: widget.currentIndex == 3 || widget.currentIndex == 4
           ? SizedBox.shrink()
           : Text(
               "Skip",

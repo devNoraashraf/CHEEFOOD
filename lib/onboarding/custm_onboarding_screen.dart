@@ -32,7 +32,7 @@ class _CustmOnboardingScreenState extends State<CustmOnboardingScreen> {
           verticalSpacing(16),
           Text(
             widget.mainText,
-            style: AppTextStyles.heading24SemiBold.copyWith(
+            style: AppTextStyles.heading20SemiBold.copyWith(
               color: AppColors.primary,
             ),
           ),

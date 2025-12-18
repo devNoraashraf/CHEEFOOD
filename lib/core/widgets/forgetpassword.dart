@@ -1,3 +1,4 @@
+import 'package:chefood/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:chefood/core/constants/app_colors.dart';
 import 'package:chefood/core/constants/app_text_styles.dart';
@@ -12,7 +13,7 @@ class ForgetPassword extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Text(
-        'Forgot Password?',
+        S.of(context).forgotPassword,
         textAlign: TextAlign.center,
         style: AppTextStyles.body16Bold.copyWith(
           fontWeight: FontWeight.w700,

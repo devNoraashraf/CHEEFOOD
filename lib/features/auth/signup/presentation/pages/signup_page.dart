@@ -3,6 +3,7 @@ import 'package:chefood/core/widgets/AccountTypeSelector.dart';
 import 'package:chefood/core/widgets/app_text_field.dart';
 import 'package:chefood/core/widgets/logo_header.dart';
 import 'package:chefood/core/widgets/primary_button.dart' show PrimaryButton;
+import 'package:chefood/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class SignupPage extends StatefulWidget {
@@ -31,41 +32,41 @@ class _SignupPageState extends State<SignupPage> {
               child: Column(
                 children: [
                   LogoHeader(
-                    header: 'Welcome to CHEFOOD!',
+                    header: S.of(context).welcomeMessage,
                     supheader:
-                        'Sign up to explore delicious homemade meals and start your food journey',
+                        S.of(context).subtitleSignup,
                   ),
                   const SizedBox(height: 50),
                   AppTextField(
-                    label: "User Name",
-                    hint: "Enter your full name",
+                    label: S.of(  context).username,
+                    hint: S.of(context).enterYourFullName,
                     keyboardType: TextInputType.emailAddress,
                     onChanged: (value) {},
                   ),
                   const SizedBox(height: 20),
                   AppTextField(
-                    label: "Email ",
+                    label: S.of(  context).email,
                     hint: "e.g.name@example.com",
                     keyboardType: TextInputType.emailAddress,
                     onChanged: (value) {},
                   ),
                   const SizedBox(height: 20),
                   AppTextField(
-                    label: "Phone Number",
+                    label: S.of(context).phoneNumber,
                     hint: "e.g. 01XXXXXXXXX ",
                     keyboardType: TextInputType.emailAddress,
                     onChanged: (value) {},
                   ),
                   const SizedBox(height: 20),
                   AppTextField(
-                    label: "Password",
+                    label: S.of(context).password,
                     hint: "e.g. ••••••••",
                     keyboardType: TextInputType.emailAddress,
                     onChanged: (value) {},
                   ),
                   const SizedBox(height: 20),
                   AppTextField(
-                    label: "Confirm Password",
+                    label: S.of(context).confirmPassword,
                     hint: "e.g. ••••••••",
                     keyboardType: TextInputType.emailAddress,
                     onChanged: (value) {},
@@ -77,10 +78,10 @@ class _SignupPageState extends State<SignupPage> {
                       setState(() {
                         widget._selectedType = value;
                       });
-                    }, label: 'Your Account',
+                    }, label: S.of( context).yourAccount,
                   ),
                   const SizedBox(height: 40),
-                  PrimaryButton(label: "Sign Up", onPressed: () {}),
+                  PrimaryButton(label: S.of(context).signup, onPressed: () {}),
                   const SizedBox(height: 8),
                   Padding(
                     padding: const EdgeInsets.only(left: 10, right: 10),
@@ -88,7 +89,7 @@ class _SignupPageState extends State<SignupPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "Already have an account? ",
+                          S.of(context).alreadyHaveAccount,
                           textAlign: TextAlign.center,
                           style: AppTextStyles.body16Regular.copyWith(
                             fontWeight: FontWeight.w400,
@@ -98,7 +99,7 @@ class _SignupPageState extends State<SignupPage> {
                         TextButton(
                           onPressed: () {},
                           child: Text(
-                            "Log In Now",
+                            S.of(context).logInNow,
                             textAlign: TextAlign.center,
                             style: AppTextStyles.body16Bold.copyWith(
                               color: const Color.fromRGBO(241, 116, 60, 1),

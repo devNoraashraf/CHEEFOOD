@@ -1,8 +1,8 @@
 import 'package:chefood/core/constants/app_colors.dart';
-import 'package:chefood/core/constants/app_text_styles.dart';
-import 'package:chefood/onboarding/boarding_indicator.dart';
-import 'package:chefood/onboarding/custm_onboarding_screen.dart';
-import 'package:chefood/onboarding/skip_text_button.dart';
+import 'package:chefood/features/onboarding/boarding_indicator.dart';
+import 'package:chefood/features/onboarding/custm_onboarding_screen.dart';
+import 'package:chefood/features/onboarding/skip_text_button.dart';
+import 'package:chefood/generated/l10n.dart';
 
 import 'package:flutter/material.dart';
 
@@ -33,35 +33,35 @@ class _OnboardingPageViewState extends State<OnboardingPageView> {
                   currentIndex = index;
                 });
               },
-              children: const [
+              children:  [
                 CustmOnboardingScreen(
                   imageOnbording: 'assets/images/onboarding1.png',
-                  mainText: 'Welcome to CHEFOOD',
+                  mainText: S.of(context).onboardingTitle1,
                   textDescription:
-                      'Discover delicious homemade meals and connect with home cooks.',
+                      S.of(context).onboardingDesc1,
                 ),
                 CustmOnboardingScreen(
                   imageOnbording: 'assets/images/onboarding2.png',
-                  mainText: 'Explore Recipes & Posts',
+                  mainText: S.of(context).onboardingTitle2,
                   textDescription:
-                      'Follow your favorite chefs, see trending recipes and food inspiration',
+                      S.of(context).onboardingDesc2,
                 ),
                 CustmOnboardingScreen(
                   imageOnbording: 'assets/images/onboarding3.png',
-                  mainText: 'Order Homemade Meals',
+                  mainText: S.of(context).onboardingTitle3,
                   textDescription:
-                      'Quick and easy delivery of tasty home cooked food',
+                      S.of(context).onboardingDesc3,
                 ),
                 CustmOnboardingScreen(
                   imageOnbording: 'assets/images/onboarding4.png',
-                  mainText: 'Save Favorites & Track Orders',
+                  mainText: S.of(context).onboardingTitle4,
                   textDescription:
-                      'Keep your favorite meals and track your deliveries in real time',
+                      S.of(context).onboardingDesc4,
                 ),
                 CustmOnboardingScreen(
                   imageOnbording:
                       'assets/images/onboarding_signin_or_login.png',
-                  mainText: 'Your Food Journey Awaits',
+                  mainText: S.of(context).onboardingTitle5,
                   textDescription: '',
                 ),
               ],

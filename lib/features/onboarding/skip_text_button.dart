@@ -1,5 +1,6 @@
 import 'package:chefood/core/constants/app_colors.dart';
 import 'package:chefood/core/constants/app_text_styles.dart';
+import 'package:chefood/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class SkipTextButton extends StatefulWidget {
@@ -27,7 +28,7 @@ class _SkipTextButtonState extends State<SkipTextButton> {
       child: widget.currentIndex == 3 || widget.currentIndex == 4
           ? SizedBox.shrink()
           : Text(
-              "Skip",
+              S.of(context).skip,
               style: AppTextStyles.body16Regular.copyWith(
                 color: AppColors.primary,
               ),

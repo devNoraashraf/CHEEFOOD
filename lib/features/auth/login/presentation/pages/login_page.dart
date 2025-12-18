@@ -7,7 +7,9 @@ import 'package:chefood/core/widgets/primary_button.dart';
 import 'package:chefood/features/auth/login/presentation/pages/loginwidgets/SignInDivider.dart'
     show SignInDivider;
 import 'package:chefood/core/widgets/logo_header.dart';
-import 'package:chefood/features/forgotpassword/presentation/pages/forgot_password/forgot_password_page.dart' show ForgotPasswordPage;
+import 'package:chefood/features/forgotpassword/presentation/pages/forgot_password/forgot_password_page.dart'
+    show ForgotPasswordPage;
+import 'package:chefood/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -28,15 +30,13 @@ class LoginPage extends StatelessWidget {
           child: Column(
             children: [
               LogoHeader(
-                header: 'Welcome Back to CHEFOOD!',
-                supheader:
-                    'Sign in to enjoy tasty meals and quick delivery',
-
+                header: S.of(context).welcomeBack,
+                supheader: S.of(context).subtitleLogin,
               ),
               const SizedBox(height: 50),
 
               AppTextField(
-                label: "Email Or Phone",
+                label: S.of(context).emailOrPhone,
                 hint: "e.g.name@example.com / 01XXXXXXXXX ",
                 keyboardType: TextInputType.emailAddress,
                 onChanged: (value) {},
@@ -44,7 +44,7 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 20),
 
               AppTextField(
-                label: "Password",
+                label: S.of(context).password,
                 hint: "e.g. ••••••••",
                 obscureText: true,
                 onChanged: (value) {},
@@ -52,15 +52,19 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 20),
               Align(
                 alignment: Alignment.centerRight,
-                child: ForgetPassword(onTap: () {
-                  Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (_) => const ForgotPasswordPage()),
-                );
-                }),
+                child: ForgetPassword(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => const ForgotPasswordPage(),
+                      ),
+                    );
+                  },
+                ),
               ),
               const SizedBox(height: 40),
-              PrimaryButton(label: "Sign In", onPressed: () {}),
+              PrimaryButton(label: S.of(context).signin, onPressed: () {}),
               const SizedBox(height: 40),
               SignInDivider(),
               const SizedBox(height: 24),
@@ -86,7 +90,7 @@ class LoginPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "Don't have an account?",
+                      S.of(context).dontHaveAccount,
                       textAlign: TextAlign.center,
                       style: AppTextStyles.body16Regular.copyWith(
                         fontWeight: FontWeight.w400,
@@ -96,7 +100,7 @@ class LoginPage extends StatelessWidget {
                     TextButton(
                       onPressed: () {},
                       child: Text(
-                        "Create account",
+                        S.of(context).createAccount,
                         textAlign: TextAlign.center,
                         style: AppTextStyles.body16Bold.copyWith(
                           color: const Color.fromRGBO(241, 116, 60, 1),

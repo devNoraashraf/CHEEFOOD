@@ -1,3 +1,4 @@
+import 'package:chefood/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:chefood/core/constants/app_text_styles.dart';
 
@@ -26,8 +27,7 @@ class SignInDivider extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8),
           child: Text(
-            'Or Sign In',
-            textAlign: TextAlign.center,
+            S.of(context).orSignIn,
             style: AppTextStyles.body16Medium.copyWith(
               color: textColor,
             ),

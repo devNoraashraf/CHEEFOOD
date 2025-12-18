@@ -1,5 +1,5 @@
 import 'package:chefood/core/constants/app_colors.dart';
-import 'package:chefood/onboarding/auth_actions_screen.dart';
+import 'package:chefood/features/onboarding/auth_actions_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:flutter_svg/flutter_svg.dart';

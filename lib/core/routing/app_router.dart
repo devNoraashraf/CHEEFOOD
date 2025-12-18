@@ -1,7 +1,7 @@
 import 'package:chefood/core/routing/routes.dart';
 import 'package:chefood/features/auth/login/presentation/pages/login_page.dart';
 import 'package:chefood/features/auth/signup/presentation/pages/signup_page.dart';
-import 'package:chefood/onboarding/onboarding_page_view.dart';
+import 'package:chefood/features/onboarding/onboarding_page_view.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {

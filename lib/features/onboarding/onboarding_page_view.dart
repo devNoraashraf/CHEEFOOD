@@ -1,8 +1,8 @@
 import 'package:chefood/core/constants/app_colors.dart';
 import 'package:chefood/core/constants/app_text_styles.dart';
-import 'package:chefood/onboarding/boarding_indicator.dart';
-import 'package:chefood/onboarding/custm_onboarding_screen.dart';
-import 'package:chefood/onboarding/skip_text_button.dart';
+import 'package:chefood/features/onboarding/boarding_indicator.dart';
+import 'package:chefood/features/onboarding/custm_onboarding_screen.dart';
+import 'package:chefood/features/onboarding/skip_text_button.dart';
 
 import 'package:flutter/material.dart';
 

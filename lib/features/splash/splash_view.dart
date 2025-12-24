@@ -1,3 +1,5 @@
+import 'package:chefood/core/helper/extension.dart';
+import 'package:chefood/core/routing/routes.dart';
 import 'package:flutter/material.dart';
 import 'splash_item_view.dart';
 
@@ -20,7 +22,7 @@ class _SplashViewState extends State<SplashView> {
     });
 
     Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, '/home');
+      context.pushReplacementNamed(Routes.onboardingScreen);
     });
   }
 

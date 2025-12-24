@@ -1,4 +1,6 @@
 import 'package:chefood/core/constants/app_text_styles.dart' show AppTextStyles;
+import 'package:chefood/core/helper/extension.dart';
+import 'package:chefood/core/routing/routes.dart';
 import 'package:chefood/core/widgets/SocialCircleButton.dart';
 import 'package:chefood/core/widgets/app_text_field.dart';
 import 'package:chefood/core/widgets/forgetpassword.dart'
@@ -54,17 +56,17 @@ class LoginPage extends StatelessWidget {
                 alignment: Alignment.centerRight,
                 child: ForgetPassword(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (_) => const ForgotPasswordPage(),
-                      ),
-                    );
+                    context.pushNamed(Routes.forgotPasswordPage);
                   },
                 ),
               ),
               const SizedBox(height: 40),
-              PrimaryButton(label: S.of(context).signin, onPressed: () {}),
+              PrimaryButton(
+                label: S.of(context).signin,
+                onPressed: () {
+                  context.pushNamed(Routes.homeScreen);
+                },
+              ),
               const SizedBox(height: 40),
               SignInDivider(),
               const SizedBox(height: 24),

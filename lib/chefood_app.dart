@@ -1,4 +1,7 @@
 import 'package:chefood/core/routing/app_router.dart';
+import 'package:chefood/core/routing/routes.dart';
+import 'package:chefood/features/auth/login/presentation/pages/login_page.dart';
+import 'package:chefood/features/home/home_view.dart';
 import 'package:chefood/features/onboarding/onboarding_page_view.dart';
 import 'package:chefood/features/splash/splash_view.dart';
 import 'package:chefood/generated/l10n.dart';
@@ -12,7 +15,7 @@ class ChefoodApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      locale: const Locale('ar', 'EG'),
+      locale: const Locale('en', 'EG'),
       localizationsDelegates: [
         S.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -22,7 +25,9 @@ class ChefoodApp extends StatelessWidget {
       supportedLocales: S.delegate.supportedLocales,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const OnboardingPageView(),
+      // home:  LoginPage(),
+      initialRoute: Routes.splashScreen,
+      onGenerateRoute: appRouter.onGenerateRoute,
     );
   }
 }

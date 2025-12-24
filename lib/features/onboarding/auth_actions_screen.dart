@@ -1,6 +1,8 @@
 import 'package:chefood/core/constants/app_colors.dart';
 import 'package:chefood/core/constants/app_text_styles.dart';
+import 'package:chefood/core/helper/extension.dart';
 import 'package:chefood/core/helper/spacing.dart';
+import 'package:chefood/core/routing/routes.dart';
 import 'package:flutter/material.dart';
 
 class AuthActionsScreen extends StatelessWidget {
@@ -62,7 +64,7 @@ class AuthActionsScreen extends StatelessWidget {
                           child: InkWell(
                             borderRadius: BorderRadius.circular(8),
                             onTap: () {
-                              Navigator.pushNamed(context, '/signup');
+                              context.pushNamed(Routes.signUpScreen);
                             },
                             child: const Center(
                               child: Text(
@@ -80,7 +82,7 @@ class AuthActionsScreen extends StatelessWidget {
                         height: 48,
                         child: ElevatedButton(
                           onPressed: () {
-                            Navigator.pushNamed(context, '/login');
+                            context.pushNamed(Routes.loginScreen);
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: AppColors.primary,

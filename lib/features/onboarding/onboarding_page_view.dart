@@ -66,7 +66,6 @@ class _OnboardingPageViewState extends State<OnboardingPageView> {
                 ),
               ],
             ),
-            // Add indicators and navigation buttons here if needed
           Positioned(
                     bottom: 80,
                     left: 0,

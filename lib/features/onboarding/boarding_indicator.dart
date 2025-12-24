@@ -1,4 +1,6 @@
 import 'package:chefood/core/constants/app_colors.dart';
+import 'package:chefood/core/helper/extension.dart';
+import 'package:chefood/core/routing/routes.dart';
 import 'package:chefood/features/onboarding/auth_actions_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
@@ -32,10 +34,7 @@ class _BoardingIndicatorState extends State<BoardingIndicator> {
         child: widget.currentIndex == 3
             ? TextButton(
                 onPressed: () {
-                  widget.onboardingPageController.nextPage(
-                    duration: Duration(microseconds: 500),
-                    curve: Curves.ease,
-                  );
+                  context.pushNamed(Routes.authActionsScreen);
                 },
                 child: Text(
                   "Start",
@@ -44,11 +43,9 @@ class _BoardingIndicatorState extends State<BoardingIndicator> {
               )
             : IconButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => AuthActionsScreen(),
-                    ),
+                  widget.onboardingPageController.nextPage(
+                    duration: Duration(milliseconds: 500),
+                    curve: Curves.ease,
                   );
                 },
                 icon: SvgPicture.asset("assets/svgs/solar_arrow-up-broken.svg"),

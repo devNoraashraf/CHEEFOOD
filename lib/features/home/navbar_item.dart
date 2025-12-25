@@ -6,29 +6,44 @@ import 'package:flutter_svg/flutter_svg.dart';
 class NavbarItem extends StatelessWidget {
   final String label;
   final String icon;
-  final Function()? onTap;
+  final bool isSelected;
+  final VoidCallback onTap;
 
   const NavbarItem({
     super.key,
     required this.label,
     required this.icon,
-    this.onTap,
+    required this.isSelected,
+    required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        SvgPicture.asset(
-          'assets/svgs/$icon.svg',
-          width: 24,
-          height: 24,
-          color: AppColors.grey,
-        ),
-        SizedBox(height: 4),
-        Text(label, style: TextStyle(color: Colors.grey, fontSize: 12)),
-      ],
+    final color = isSelected ? AppColors.primary : AppColors.grey;
+
+    return InkWell(
+      borderRadius: BorderRadius.circular(12),
+      onTap: onTap,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          SvgPicture.asset(
+            'assets/svgs/$icon.svg',
+            width: isSelected ? 26 : 24,
+            height: isSelected ? 26 : 24,
+            color: color,
+          ),
+          const SizedBox(height: 4),
+          Text(
+            label,
+            style: TextStyle(
+              color: color,
+              fontSize: 12,
+              fontWeight: isSelected ? FontWeight.w600 : FontWeight.w400,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

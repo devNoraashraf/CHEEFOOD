@@ -29,5 +29,7 @@
     "onboardingDesc1": "Discover delicious homemade meals and connect with home cooks.",
     "onboardingDesc2": "Follow your favorite chefs, see trending recipes and food inspiration",
     "onboardingDesc3": "Quick and easy delivery of tasty home cooked food",
-    "onboardingDesc4": "Save Favorites & Track Orders"
+    "onboardingDesc4": "Save Favorites & Track Orders",
+    "searchHint": "Search for recipes or homemade meals ..."
+
 }

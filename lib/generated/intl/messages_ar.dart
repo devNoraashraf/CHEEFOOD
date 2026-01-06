@@ -72,6 +72,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "orSignIn": MessageLookupByLibrary.simpleMessage("أو تسجيل الدخول"),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
     "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+    "searchHint": MessageLookupByLibrary.simpleMessage(
+      "ابحث عن وصفات أو وجبات منزلية الصنع ...",
+    ),
     "signup": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
     "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
     "subtitleLogin": MessageLookupByLibrary.simpleMessage(

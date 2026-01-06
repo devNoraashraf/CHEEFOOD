@@ -1,4 +1,5 @@
 import 'package:chefood/core/constants/app_colors.dart';
+import 'package:chefood/features/home/home_body_view.dart';
 import 'package:chefood/features/home/navbar_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -14,7 +15,7 @@ class _HomeViewState extends State<HomeView> {
   int selectedIndex = 0;
 
   final List<Widget> pages = const [
-    Center(child: Text('Home Page')),
+    HomeBodyView(),
     Center(child: Text('Recipes Page')),
     Center(child: Text('Orders Page')),
     Center(child: Text('Chefs Page')),

@@ -318,6 +318,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Search for recipes or homemade meals ...`
+  String get searchHint {
+    return Intl.message(
+      'Search for recipes or homemade meals ...',
+      name: 'searchHint',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

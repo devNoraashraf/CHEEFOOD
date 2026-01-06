@@ -68,6 +68,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "orSignIn": MessageLookupByLibrary.simpleMessage("Or Sign In"),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
     "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone Number"),
+    "searchHint": MessageLookupByLibrary.simpleMessage(
+      "Search for recipes or homemade meals ...",
+    ),
     "signin": MessageLookupByLibrary.simpleMessage("Sign In"),
     "signup": MessageLookupByLibrary.simpleMessage("Sign Up"),
     "skip": MessageLookupByLibrary.simpleMessage("Skip"),
